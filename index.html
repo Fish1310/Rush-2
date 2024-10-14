@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Car models and specifications">
+    <title>Car Showcase - Buy Your Dream Car</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Car Showcase</h1>
+        <nav>
+            <button id="menu-toggle" onclick="toggleMenu()">☰</button>
+            <a href="contact.html" id="cart-icon">🛒</a>
+        </nav>
+
+        <div id="menu" class="hidden">
+            <button id="menu-close" onclick="toggleMenu()">✕</button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#magazine">Magazine</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="filters">
+        <h2>Filter Cars</h2>
+        <input type="text" id="searchBar" placeholder="Search by model or brand" onkeyup="filterCars()">
+        
+        <label for="priceRange">Budget (Max $):</label>
+        <input type="range" id="priceRange" min="0" max="500000" step="5000" value="500000" oninput="updatePriceFilter(this.value)">
+        <span id="priceDisplay">$500,000</span>
+    
+        <select id="brandFilter" onchange="filterCars()">
+            <option value="all">All Brands</option>
+            <option value="audi">Audi</option>
+            <option value="brabus">Brabus</option>
+            <option value="bmw">BMW</option>
+            <option value="lamborghini">Lamborghini</option>
+            <option value="mclaren">Mclaren</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="porsche">Porsche</option>
+            <option value="rolls-royce">Rolls-Royce</option>
+        </select>
+        
+    </section>
+    
+    
+    <section id="car-list">
+        <div class="car" data-brand="mercedes">
+            <img src="A45S.jpg" alt="A 45S">
+            <h3>Mercedes A45S </h3>
+            <p>Reliable sedan with great fuel efficiency.</p>
+            <p class="price">$90,000</p>
+            <button onclick="window.location.href='contact.html'">Inquire about this car</button>
+        </div>
+        <div class="car" data-brand="bmw">
+            <img src="g80_m3.jpg" alt="BMW M3">
+            <h3>BMW M3</h3>
+            <p>Sporty sedan with premium features.</p>
+            <p class="price">$160,000</p>
+            <button onclick="window.location.href='contact.html'">Inquire about this car</button>
+        </div>
+        <div class="car" data-brand="audi">
+            <img src="audirsq8.jpg" alt="Audi RS Q8">
+            <h3>Audi RS Q8</h3>
+            <p>Luxury SUV with a sleek design.</p>
+            <p class="price">$190,000</p>
+            <button onclick="window.location.href='contact.html'">Inquire about this car</button>
+        </div>
+        <div class="car" data-brand="brabus">
+            <img src="classe-g800-brabus.jpg" alt="G 800 BRABUS">
+            <h3>G 800 BRABUS</h3>
+            <p>Efficient for all-terrain use.</p>
+            <p class="price">$350,000</p>
+            <button onclick="window.location.href='contact.html'">Inquire about this car</button>
+        </div>
+        <div class="car" data-brand="rolls-royce">
+            <img src="Rolls-Royce.jpg" alt="Rolls-Royce Ghost">
+            <h3>Rolls-Royce Ghost</h3>
+            <p>Sporty sedan with premium features.</p>
+            <p class="price">$450,000</p>
+            <button onclick="window.location.href='contact.html'">Inquire about this car</button>
+        </div>
+        <div class="car" data-brand="mclaren">
+            <img src="Mclaren570s.jpg" alt="Mclaren 570S">
+            <h3>Mclaren 570S</h3>
+            <p>Power, Elegance, Lightning acceleration, Luxury and performance</p>
+            <p class="price">$275,000</p>
+            <button onclick="window.location.href='contact.html'">Inquire about this car</button>
+        </div>
+        <div class="car" data-brand="porsche">
+            <img src="911tubos.jpg" alt="911 Tubo S">
+            <h3>Porsche 911 Turbo S</h3>
+            <p>Power, Elegance, Lightning acceleration, Luxury and performance</p>
+            <p class="price">$280,000</p>
+            <button onclick="window.location.href='contact.html'">Inquire about this car</button>
+        </div>
+        <div class="car" data-brand="lamborghini">
+            <img src="Lamborghini-Revuelto-22.jpg" alt="Lamborghini Revuelto">
+            <h3>Lamborghini Revuelto</h3>
+            <p>Power, Elegance, Lightning acceleration, Luxury and performance</p>
+            <p class="price">$500,000</p>
+            <button onclick="window.location.href='contact.html'">Inquire about this car</button>
+        </div>
+    </section>
+    <div class="pagination">
+        <a href="#" class="page">1</a>
+        <a href="#" class="page">2</a>
+        <a href="#" class="page">3</a>
+        <a href="#" class="page">4</a>
+        <a href="#" class="page">5</a>
+        <a href="#" class="page">6</a>
+        <a href="#" class="page">7</a>
+        <a href="#" class="page">8</a>
+        <a href="#" class="page">9</a>
+        <a href="#" class="page">10</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Car Showcase. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
